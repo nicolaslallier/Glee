@@ -12,7 +12,7 @@
 ### Dev commands
 
 - **Install deps**: `uv sync`
-- **Run dev server**: `uv run uvicorn glee.main:app --reload`
+- **Run dev server**: `make run` (or `uv run uvicorn glee.main:app --reload`)
 - **Run Python**: `uv run python -m ...`
 - **Install a package**: `uv add <pkg>` / `uv add --dev <pkg>`
 
