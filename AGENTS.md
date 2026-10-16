@@ -4,17 +4,27 @@
 
 ## Project state
 
-- **Empty repo** — no source code, config, or tooling yet.
-- Monorepo structure is **planned but not implemented**.
+- **Python 3.13+** managed with `uv`
+- **FastAPI** backend, flat `glee/` package
 
 ## How to use this file
 
-As soon as the project structure is defined, fill in:
+### Dev commands
 
-- **Build / test / lint commands** (exact names and shortcuts)
-- **Monorepo package layout** (which dirs hold backend, frontend, shared packages)
-- **Task runner or Makefile targets**
-- **Framework-specific conventions** (e.g. how the backend starts, how the frontend dev server runs)
-- **Any setup prerequisites** (env vars, Docker services, local infrastructure)
+- **Install deps**: `uv sync`
+- **Run dev server**: `uv run uvicorn glee.main:app --reload`
+- **Run Python**: `uv run python -m ...`
+- **Install a package**: `uv add <pkg>` / `uv add --dev <pkg>`
 
-Keep it short — every line should answer "would an agent likely miss this without help?"
+### Monorepo layout
+
+```
+glee/           # Python backend package
+  __init__.py
+  main.py       # FastAPI app, routes
+```
+
+### Framework conventions
+
+- `uv run` for all Python execution (resolves venv automatically)
+- FastAPI app lives in `glee/main.py`

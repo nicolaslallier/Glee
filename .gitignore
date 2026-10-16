@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+.ruff_cache/
+*.pyc
+/htmlcov/
+.DS_Store

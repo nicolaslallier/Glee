@@ -1,0 +1,13 @@
+[project]
+name = "glee"
+version = "0.1.0"
+description = "A minimal FastAPI backend with health check endpoint"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+]
+
+[[project.scripts]]
+name = "glee"
+script = "glee.main:run"
