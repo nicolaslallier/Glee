@@ -1,7 +1,7 @@
 [project]
 name = "glee"
 version = "0.1.0"
-description = "Add your description here"
+description = "A minimal FastAPI backend with health check endpoint"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.115",
